@@ -1,23 +1,20 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class RethrowError : MonoBehaviour
+public class NewBehaviourScript : MonoBehaviour
 {
     void Update()
     {
         try
         {
-            DoSomethingInteresting();
+            throw new Exception();
         }
         catch (Exception e)
         {
             Debug.Log(e.Message);
             throw e;
         }
-    }
-
-    private void DoSomethingInteresting()
-    {
-        throw new System.NotImplementedException();
     }
 }

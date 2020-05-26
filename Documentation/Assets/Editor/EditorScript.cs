@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class RethrowError : MonoBehaviour
+public class EditorScript : MonoBehaviour
 {
     void Update()
     {
         try
         {
-            DoSomethingInteresting();
+            throw new Exception();
         }
         catch (Exception e)
         {
@@ -16,8 +18,4 @@ public class RethrowError : MonoBehaviour
         }
     }
 
-    private void DoSomethingInteresting()
-    {
-        throw new System.NotImplementedException();
-    }
 }
